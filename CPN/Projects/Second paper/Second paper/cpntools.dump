@@ -1,0 +1,543 @@
+Beta execution aborted: Stop is called.
+
+Stop message:
+  "*** Exception processing
+Cannot delete file
+File exception for 'C:\Users\m\AppData\Roaming\CPN Tools\preferences.xml'
+Error in system call: Permission denied
+"
+
+Call chain: (nti_ms)
+
+  item <stop#> in ~beta/basiclib/betaenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  item OtherError#OtherError#FileException#streamException#<exception#> in ~beta/basiclib/betaenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  item <*>ProcessError# in ~beta/basiclib/private/file_ntbody
+    -- delete# in ~beta/basiclib/file
+  item *<ProcessError#> in ~beta/basiclib/private/file_ntbody
+    -- FILEPRIVATE-~ in ~beta/basiclib/private/file_ntbody
+  item <delete#> in ~beta/basiclib/file
+    -- saveFile#FileObject#File#stream# in C:/cpn2000/cpntools/cpnworkspace
+  item <*> in C:/cpn2000/cpntools/private/cpnworkspacebody
+    -- onQuit#onQuit# in C:/cpn2000/cpntools/cpnworkspace
+  item <onQuit#>onQuit# in C:/cpn2000/cpntools/cpnworkspace
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+  item onQuit#<onQuit#> in ~beta/postwimp/foundation/world
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+  item <onQuit#>onQuit# in ~beta/postwimp/foundation/private/worldbody
+    -- WidgetHandler#SurfaceHandler# in ~beta/postwimp/foundation/private/worldbody
+  item onQuit#<onQuit#> in ~beta/postwimp/foundation/abstractsurface
+    -- WidgetHandler#SurfaceHandler# in ~beta/postwimp/foundation/private/worldbody
+  item <onAboutToClose#>aboutToClose#event# in ~beta/postwimp/foundation/guisurface
+    -- eventHandler#eventhandler#eventhandler# in ~beta/postwimp/foundation/guisurface
+  item onAboutToClose#<aboutToClose#>event# in ~beta/guienv/guienv
+    -- eventHandler#eventhandler#eventhandler# in ~beta/postwimp/foundation/guisurface
+  item onAboutToClose#aboutToClose#<event#> in ~beta/guienv/guienv
+    -- eventHandler#eventhandler#eventhandler# in ~beta/postwimp/foundation/guisurface
+  item <processClose#> in ~beta/guienv/private/winnt/windowbody
+    -- GUIENVWINDOWMETHODSDISPATCHMESSAGE-~ in ~beta/guienv/private/winnt/windowbody
+  item <GUIENVWINDOWMETHODSDISPATCHMESSAGE-~> in ~beta/guienv/private/winnt/windowbody
+    -- dispatchMessage#dispatchMessage# in ~beta/guienv/private/winnt/guienv_ntiprivate
+  item <dispatchMessage#>dispatchMessage# in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- windowMethods#interfaceObjectMethods# in ~beta/guienv/private/winnt/guienv_ntiprivate
+  allocating item dispatchMessage#<dispatchMessage#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- windowMethods#interfaceObjectMethods# in ~beta/guienv/private/winnt/guienv_ntiprivate
+  item dispatchMessage#<dispatchMessage#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- windowMethods#interfaceObjectMethods# in ~beta/guienv/private/winnt/guienv_ntiprivate
+  item <GUIENVINTERFACEOBJECTDISPATCHMESSAGE-~> in ~beta/guienv/private/winnt/guienv_ntibody
+    -- dispatchMessage# in ~beta/guienv/private/winnt/guienv_ntiprivate
+  item <dispatchMessage#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- main#window#interfaceObject# in ~beta/postwimp/foundation/guisurface
+  item <GUIENVSTANDARDWINDOWPROC-~> in ~beta/guienv/private/winnt/guienv_ntibody
+    -- StandardWindowProc# in ~beta/guienv/private/winnt/guienv_ntiprivate
+  item <*>cycle# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  item *<cycle#> in ~beta/basiclib/betaenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  comp <XcallbackThread#>System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  comp XcallbackThread#<System#>SysHead# in ~beta/basiclib/basicsystemenv
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+  comp XcallbackThread#System#<SysHead#> in ~beta/basiclib/basicsystemenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+
+  item attNext#<realValue#> in ~beta/basiclib/betaenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  item <next#> in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  item <registerCallback#>XsystemEnvHandleCallbackP# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  item registerCallback#<XsystemEnvHandleCallbackP#> in ~beta/guienv/guienv
+    -- GUIenv# in ~beta/guienv/guienv
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- GUIenv# in ~beta/guienv/guienv
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- GUIenv# in ~beta/guienv/guienv
+  [ EXTERNAL ACTIVATION PART ]
+  item <GUIENVSTANDARDWINDOWPROC-~> in ~beta/guienv/private/winnt/guienv_ntibody
+    -- StandardWindowProc# in ~beta/guienv/private/winnt/guienv_ntiprivate
+  item <*>cycle# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  item *<cycle#> in ~beta/basiclib/betaenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  comp <XcallbackThread#>System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  comp XcallbackThread#<System#>SysHead# in ~beta/basiclib/basicsystemenv
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+  comp XcallbackThread#System#<SysHead#> in ~beta/basiclib/basicsystemenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+
+  item attNext#<realValue#> in ~beta/basiclib/betaenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  item <next#> in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  item <registerCallback#>XsystemEnvHandleCallbackP# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  item registerCallback#<XsystemEnvHandleCallbackP#> in ~beta/guienv/guienv
+    -- GUIenv# in ~beta/guienv/guienv
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- GUIenv# in ~beta/guienv/guienv
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- GUIenv# in ~beta/guienv/guienv
+  [ EXTERNAL ACTIVATION PART ]
+  item <GUIENVSTANDARDWINDOWPROC-~> in ~beta/guienv/private/winnt/guienv_ntibody
+    -- StandardWindowProc# in ~beta/guienv/private/winnt/guienv_ntiprivate
+  item <*>cycle# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  item *<cycle#> in ~beta/basiclib/betaenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  comp <XcallbackThread#>System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  comp XcallbackThread#<System#>SysHead# in ~beta/basiclib/basicsystemenv
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+  comp XcallbackThread#System#<SysHead#> in ~beta/basiclib/basicsystemenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+
+  item attNext#<realValue#> in ~beta/basiclib/betaenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  item <next#> in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  item <registerCallback#>XsystemEnvHandleCallbackP# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  item registerCallback#<XsystemEnvHandleCallbackP#> in ~beta/guienv/guienv
+    -- GUIenv# in ~beta/guienv/guienv
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- GUIenv# in ~beta/guienv/guienv
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- GUIenv# in ~beta/guienv/guienv
+  [ EXTERNAL ACTIVATION PART ]
+  item <processOneEvent#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- GUIenv# in ~beta/guienv/guienv
+  item <mainLoop#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- GUIenv# in ~beta/guienv/guienv
+  item <GUIenv#> in ~beta/guienv/guienv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  item <run#>run# in ~beta/postwimp/foundation/guisurface
+    -- GUISurface#Surface# in ~beta/postwimp/foundation/guisurface
+  item run#<run#> in ~beta/postwimp/foundation/abstractsurface
+    -- GUISurface#Surface# in ~beta/postwimp/foundation/guisurface
+  item <platformAfter#> in ~beta/postwimp/foundation/private/worldbody
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+  item <after#> in ~beta/postwimp/foundation/world
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+  comp PROGRAM-~CPNWorkSpace#Workspace#<World#>SystemEnv#SysHead# in ~beta/postwimp/foundation/world
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  comp PROGRAM-~CPNWorkSpace#Workspace#World#<SystemEnv#>SysHead# in ~beta/basiclib/basicsystemenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  comp PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#<SysHead#> in ~beta/basiclib/basicsystemenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+
+  item <attNext#>realValue# in ~beta/basiclib/private/basicsystemenvbody
+    -- BASICSYSTEMENVPRIVATE-~ in ~beta/basiclib/private/basicsystemenvbody
+  item attNext#<realValue#> in ~beta/basiclib/betaenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  item <UIIdle#>booleanValue# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  item UIIdle#<booleanValue#> in ~beta/basiclib/betaenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  item <processOneEvent#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- GUIenv# in ~beta/guienv/guienv
+  item <mainLoop#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+    -- GUIenv# in ~beta/guienv/guienv
+  item <GUIenv#> in ~beta/guienv/guienv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  item <start#> in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  comp <BASICSCHEDULER-~>SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+  comp BASICSCHEDULER-~<SysHead#> in ~beta/basiclib/basicsystemenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+
+  item <*> in ~beta/basiclib/betaenv
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+  basic component in ~beta/basiclib/betaenv
+
+
+Low level information:
+
+Stop message:
+  "*** Exception processing
+Cannot delete file
+File exception for 'C:\Users\m\AppData\Roaming\CPN Tools\preferences.xml'
+Error in system call: Permission denied
+"
+
+Call chain: (nti_ms)
+
+  item <stop#> in ~beta/basiclib/betaenv
+  { PC  0x489c83Warning! nm(DumpSectionTable): Couldn't find section number of .text
+ <betaenv:M127+0xf8>, object 0x1c99e30, proto 0x94ffbc stop# [ast: 0x0001,0x0973] <betaenv:T127+0x1> }
+    -- Surrounding object (0x94e4a2) damaged!
+  item OtherError#OtherError#FileException#streamException#<exception#> in ~beta/basiclib/betaenv
+  { PC  0x48a21f <betaenv:M157+0xac>, object 0x1ca16e0, proto 0x950674 exception# [ast: 0x0001,0x0b6b] <betaenv:T157+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  item <*>ProcessError# in ~beta/basiclib/private/file_ntbody
+  { PC  0x481778 <file:M30>, object 0x1ca18f8, proto 0x99d590 * [ast: 0x001f,0x000e] <file_ntbody:T15+0x1> }
+    -- delete# in ~beta/basiclib/file
+    { Surrounding object 0x1ca1930, proto 0xad04c6 delete# [ast: 0x0001,0x01b8] <file:T41+0x1> }
+  item *<ProcessError#> in ~beta/basiclib/private/file_ntbody
+  { PC  0x4805e3 <file_ntbody:M10+0x161>, object 0x1ca18f8, proto 0x99d47e ProcessError# [ast: 0x0015,0x0013] <file_ntbody:T10+0x1> }
+    -- FILEPRIVATE-~ in ~beta/basiclib/private/file_ntbody
+    { Surrounding object 0x24dca60, proto 0x99d448 FILEPRIVATE-~ [ast: 0x0015,0x0001] <file_ntbody:T9+0x1> }
+  item <delete#> in ~beta/basiclib/file
+  { PC  0x481709 <file:M41+0x91>, object 0x1ca1930, proto 0xad04c6 delete# [ast: 0x0001,0x01b8] <file:T41+0x1> }
+    -- saveFile#FileObject#File#stream# in C:/cpn2000/cpntools/cpnworkspace
+    { Surrounding object 0x24dc990, proto 0xa69628 saveFile# [ast: 0x0001,0x0423] <cpnworkspace:T33+0x1> }
+  item <*> in C:/cpn2000/cpntools/private/cpnworkspacebody
+  { PC  0x5d9865 <cpnworkspacebody:M18+0x4c0>, object 0x24dc978, proto 0x9fbcd6 * [ast: 0x0008,0x0038] <cpnworkspacebody:T18+0x1> }
+    -- onQuit#onQuit# in C:/cpn2000/cpntools/cpnworkspace
+    { Surrounding object 0x23da308, proto 0xa69db0 onQuit# [ast: 0x0001,0x06c2] <cpnworkspace:T57+0x1> }
+  item <onQuit#>onQuit# in C:/cpn2000/cpntools/cpnworkspace
+  { PC  0x5d932e <cpnworkspace:M57+0x77>, object 0x23da308, proto 0xa69db0 onQuit# [ast: 0x0001,0x06c2] <cpnworkspace:T57+0x1> }
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+    { Surrounding object 0x21a7938, proto 0xa0e0a0 PROGRAM-~ [ast: 0x0001,0x0001] <cpntools:T2+0x1> }
+  item onQuit#<onQuit#> in ~beta/postwimp/foundation/world
+  { PC  0x736931 <world:M8+0xf>, object 0x23da308, proto 0xac9ae4 onQuit# [ast: 0x0001,0x0116] <world:T8+0x1> }
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+    { Surrounding object 0x21a7938, proto 0xa0e0a0 PROGRAM-~ [ast: 0x0001,0x0001] <cpntools:T2+0x1> }
+  item <onQuit#>onQuit# in ~beta/postwimp/foundation/private/worldbody
+  { PC  0x6275c6 <worldbody:M119+0x22>, object 0x24f14f0, proto 0xa12150 onQuit# [ast: 0x0003,0x02c8] <worldbody:T119+0x1> }
+    -- WidgetHandler#SurfaceHandler# in ~beta/postwimp/foundation/private/worldbody
+    { Surrounding object 0x21ab720, proto 0xa11f4e WidgetHandler# [ast: 0x0003,0x021a] <worldbody:T111+0x1> }
+  item onQuit#<onQuit#> in ~beta/postwimp/foundation/abstractsurface
+  { PC  0x738e83 <abstractsurface:M160+0xf>, object 0x24f14f0, proto 0xad4c0e onQuit# [ast: 0x0001,0x0cd6] <abstractsurface:T160+0x1> }
+    -- WidgetHandler#SurfaceHandler# in ~beta/postwimp/foundation/private/worldbody
+    { Surrounding object 0x21ab720, proto 0xa11f4e WidgetHandler# [ast: 0x0003,0x021a] <worldbody:T111+0x1> }
+  item <onAboutToClose#>aboutToClose#event# in ~beta/postwimp/foundation/guisurface
+  { PC  0x48fd96 <guisurface:M61+0x2c>, object 0x242e970, proto 0x9a417e onAboutToClose# [ast: 0x0001,0x08bd] <guisurface:T61+0x1> }
+    -- eventHandler#eventhandler#eventhandler# in ~beta/postwimp/foundation/guisurface
+    { Surrounding object 0x21a9ea8, proto 0x9a412c eventHandler# [ast: 0x0001,0x08b8] <guisurface:T60+0x1> }
+  item onAboutToClose#<aboutToClose#>event# in ~beta/guienv/guienv
+  { PC  0x4b37f4 <guienv:G109>, object 0x242e970, proto 0x9ba162 aboutToClose# [ast: 0x0001,0x04cb] <guienv:T117+0x1> }
+    -- eventHandler#eventhandler#eventhandler# in ~beta/postwimp/foundation/guisurface
+    { Surrounding object 0x21a9ea8, proto 0x9a412c eventHandler# [ast: 0x0001,0x08b8] <guisurface:T60+0x1> }
+  item onAboutToClose#aboutToClose#<event#> in ~beta/guienv/guienv
+  { PC  0x49793b <guienv:M12+0xaf>, object 0x242e970, proto 0x9b891e event# [ast: 0x0001,0x0077] <guienv:T12+0x1> }
+    -- eventHandler#eventhandler#eventhandler# in ~beta/postwimp/foundation/guisurface
+    { Surrounding object 0x21a9ea8, proto 0x9a412c eventHandler# [ast: 0x0001,0x08b8] <guisurface:T60+0x1> }
+  item <processClose#> in ~beta/guienv/private/winnt/windowbody
+  { PC  0x43fbdd <windowbody:M28+0x2f>, object 0x242e9a0, proto 0x96a36c processClose# [ast: 0x0002,0x0300] <windowbody:T28+0x1> }
+    -- GUIENVWINDOWMETHODSDISPATCHMESSAGE-~ in ~beta/guienv/private/winnt/windowbody
+    { Surrounding object 0x242e9b0, proto 0x969f5a GUIENVWINDOWMETHODSDISPATCHMESSAGE-~ [ast: 0x0002,0x0001] <windowbody:T11+0x1> }
+  item <GUIENVWINDOWMETHODSDISPATCHMESSAGE-~> in ~beta/guienv/private/winnt/windowbody
+  { PC  0x43f937 <windowbody:M11+0x403>, object 0x242e9b0, proto 0x969f5a GUIENVWINDOWMETHODSDISPATCHMESSAGE-~ [ast: 0x0002,0x0001] <windowbody:T11+0x1> }
+    -- dispatchMessage#dispatchMessage# in ~beta/guienv/private/winnt/guienv_ntiprivate
+    { Surrounding object 0x242e9e0, proto 0x9ae03a dispatchMessage# [ast: 0x0006,0x0015] <guienv_ntiprivate:T92+0x1> }
+  item <dispatchMessage#>dispatchMessage# in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4ab9ed <guienv_ntiprivate:G120>, object 0x242e9e0, proto 0x9ae03a dispatchMessage# [ast: 0x0006,0x0015] <guienv_ntiprivate:T92+0x1> }
+    -- windowMethods#interfaceObjectMethods# in ~beta/guienv/private/winnt/guienv_ntiprivate
+    { Surrounding object 0x21a8df0, proto 0x9adffe windowMethods# [ast: 0x0006,0x0010] <guienv_ntiprivate:T91+0x1> }
+  allocating item dispatchMessage#<dispatchMessage#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x497839 <guienv_ntibody:M71+0x5e>, object 0x242e9e0, proto 0x9adf0e dispatchMessage# [ast: 0x0004,0x00c0] <guienv_ntiprivate:T87+0x1> }
+    -- windowMethods#interfaceObjectMethods# in ~beta/guienv/private/winnt/guienv_ntiprivate
+    { Surrounding object 0x21a8df0, proto 0x9adffe windowMethods# [ast: 0x0006,0x0010] <guienv_ntiprivate:T91+0x1> }
+  item dispatchMessage#<dispatchMessage#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4ab7ef <guienv_ntiprivate:M87+0x1a>, object 0x242e9e0, proto 0x9adf0e dispatchMessage# [ast: 0x0004,0x00c0] <guienv_ntiprivate:T87+0x1> }
+    -- windowMethods#interfaceObjectMethods# in ~beta/guienv/private/winnt/guienv_ntiprivate
+    { Surrounding object 0x21a8df0, proto 0x9adffe windowMethods# [ast: 0x0006,0x0010] <guienv_ntiprivate:T91+0x1> }
+  item <GUIENVINTERFACEOBJECTDISPATCHMESSAGE-~> in ~beta/guienv/private/winnt/guienv_ntibody
+  { PC  0x497889 <guienv_ntibody:M72+0x4c>, object 0x242ea00, proto 0x9a6bcc GUIENVINTERFACEOBJECTDISPATCHMESSAGE-~ [ast: 0x000d,0x0001] <guienv_ntibody:T72+0x1> }
+    -- dispatchMessage# in ~beta/guienv/private/winnt/guienv_ntiprivate
+    { Surrounding object 0x242ea10, proto 0x9adf4a dispatchMessage# [ast: 0x0004,0x00cf] <guienv_ntiprivate:T88+0x1> }
+  item <dispatchMessage#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4ab7d2 <guienv_ntiprivate:M88+0x1a>, object 0x242ea10, proto 0x9adf4a dispatchMessage# [ast: 0x0004,0x00cf] <guienv_ntiprivate:T88+0x1> }
+    -- main#window#interfaceObject# in ~beta/postwimp/foundation/guisurface
+    { Surrounding object 0x21a8b98, proto 0x9a4090 main# [ast: 0x0001,0x08a8] <guisurface:T58+0x1> }
+  item <GUIENVSTANDARDWINDOWPROC-~> in ~beta/guienv/private/winnt/guienv_ntibody
+  { PC  0x496bf9 <guienv_ntibody:M58+0x506>, object 0x242e818, proto 0x9a684a GUIENVSTANDARDWINDOWPROC-~ [ast: 0x0002,0x0001] <guienv_ntibody:T58+0x1> }
+    -- StandardWindowProc# in ~beta/guienv/private/winnt/guienv_ntiprivate
+    { Surrounding object 0x23d9bc8, proto 0x9ad39e StandardWindowProc# [ast: 0x0001,0x04f0] <guienv_ntiprivate:T38+0x1> }
+  item <*>cycle# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c155 <guienvntsystemenvbody:M14+0x27>, object 0x242ea20, proto 0x96deb2 * [ast: 0x0005,0x02bb] <guienvntsystemenvbody:T14+0x1> }
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x242e7a8, proto 0x96ddf4 XcallbackThread# [ast: 0x0005,0x021d] <guienvntsystemenvbody:T11+0x1> }
+  item *<cycle#> in ~beta/basiclib/betaenv
+  { PC  0x611a29 <betaenv:M43+0xb>, object 0x242ea20, proto 0x94eca6 cycle# [ast: 0x0001,0x03bf] <betaenv:T43+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  comp <XcallbackThread#>System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c112 <guienvntsystemenvbody:G14>, object 0x242e7a8, proto 0x96ddf4 XcallbackThread# [ast: 0x0005,0x021d] <guienvntsystemenvbody:T11+0x1> }
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x21a75f8, proto 0x96db8e PIOPRIVATE-~ [ast: 0x0005,0x0001] <guienvntsystemenvbody:T5+0x1> }
+  comp XcallbackThread#<System#>SysHead# in ~beta/basiclib/basicsystemenv
+  { PC  0x740e93 <basicsystemenv:M37>, object 0x242e7a8, proto 0xadabcc System# [ast: 0x0001,0x00fb] <basicsystemenv:T18+0x1> }
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+    { Surrounding object 0x21a7938, proto 0xa0e0a0 PROGRAM-~ [ast: 0x0001,0x0001] <cpntools:T2+0x1> }
+  comp XcallbackThread#System#<SysHead#> in ~beta/basiclib/basicsystemenv
+  { PC  0x740b57 <basicsystemenv:M56+0xb>, object 0x242e7a8, proto 0xadb516 SysHead# [ast: 0x0001,0x0310] <<unknown>> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+
+  item attNext#<realValue#> in ~beta/basiclib/betaenv
+  { PC  0x4028c5 <betaenv:M20+0xb>, object 0x21a78e8, proto 0x94e7fe realValue# [ast: 0x0001,0x0150] <betaenv:T20+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  item <next#> in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c3b5 <guienvntsystemenvbody:M13+0x238>, object 0x242e7e0, proto 0x96de84 next# [ast: 0x0005,0x023c] <guienvntsystemenvbody:T13+0x1> }
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x242e7a8, proto 0x96ddf4 XcallbackThread# [ast: 0x0005,0x021d] <guienvntsystemenvbody:T11+0x1> }
+  item <registerCallback#>XsystemEnvHandleCallbackP# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c09d <guienvntsystemenvbody:M15+0xb6>, object 0x21aba10, proto 0x96dee2 registerCallback# [ast: 0x0005,0x02d3] <guienvntsystemenvbody:T15+0x1> }
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x21a75f8, proto 0x96db8e PIOPRIVATE-~ [ast: 0x0005,0x0001] <guienvntsystemenvbody:T5+0x1> }
+  item registerCallback#<XsystemEnvHandleCallbackP#> in ~beta/guienv/guienv
+  { PC  0x4b2eb5 <guienv:M331+0xb>, object 0x21aba10, proto 0x9bced6 XsystemEnvHandleCallbackP# [ast: 0x0001,0x0e12] <guienv:T331+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4aaaa4 <guienv_ntiprivate:M38+0x5c>, object 0x23d9bc8, proto 0x9ad39e StandardWindowProc# [ast: 0x0001,0x04f0] <guienv_ntiprivate:T38+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4aaaf0 <guienv_ntiprivate:M38+0xa8>, object 0x23d9bc8, proto 0x9ad39e StandardWindowProc# [ast: 0x0001,0x04f0] <guienv_ntiprivate:T38+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  [ EXTERNAL ACTIVATION PART ]
+  item <GUIENVSTANDARDWINDOWPROC-~> in ~beta/guienv/private/winnt/guienv_ntibody
+  { PC  0x0 <<unknown>>, object 0x23d9df8, proto 0x9a684a GUIENVSTANDARDWINDOWPROC-~ [ast: 0x0002,0x0001] <guienv_ntibody:T58+0x1> }
+    -- StandardWindowProc# in ~beta/guienv/private/winnt/guienv_ntiprivate
+    { Surrounding object 0x23d9ea0, proto 0x9ad39e StandardWindowProc# [ast: 0x0001,0x04f0] <guienv_ntiprivate:T38+0x1> }
+  item <*>cycle# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c155 <guienvntsystemenvbody:M14+0x27>, object 0x242ea40, proto 0x96deb2 * [ast: 0x0005,0x02bb] <guienvntsystemenvbody:T14+0x1> }
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x23d9e50, proto 0x96ddf4 XcallbackThread# [ast: 0x0005,0x021d] <guienvntsystemenvbody:T11+0x1> }
+  item *<cycle#> in ~beta/basiclib/betaenv
+  { PC  0x611a29 <betaenv:M43+0xb>, object 0x242ea40, proto 0x94eca6 cycle# [ast: 0x0001,0x03bf] <betaenv:T43+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  comp <XcallbackThread#>System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c112 <guienvntsystemenvbody:G14>, object 0x23d9e50, proto 0x96ddf4 XcallbackThread# [ast: 0x0005,0x021d] <guienvntsystemenvbody:T11+0x1> }
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x21a75f8, proto 0x96db8e PIOPRIVATE-~ [ast: 0x0005,0x0001] <guienvntsystemenvbody:T5+0x1> }
+  comp XcallbackThread#<System#>SysHead# in ~beta/basiclib/basicsystemenv
+  { PC  0x740e93 <basicsystemenv:M37>, object 0x23d9e50, proto 0xadabcc System# [ast: 0x0001,0x00fb] <basicsystemenv:T18+0x1> }
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+    { Surrounding object 0x21a7938, proto 0xa0e0a0 PROGRAM-~ [ast: 0x0001,0x0001] <cpntools:T2+0x1> }
+  comp XcallbackThread#System#<SysHead#> in ~beta/basiclib/basicsystemenv
+  { PC  0x740b57 <basicsystemenv:M56+0xb>, object 0x23d9e50, proto 0xadb516 SysHead# [ast: 0x0001,0x0310] <<unknown>> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+
+  item attNext#<realValue#> in ~beta/basiclib/betaenv
+  { PC  0x4028c5 <betaenv:M20+0xb>, object 0x21a78e8, proto 0x94e7fe realValue# [ast: 0x0001,0x0150] <betaenv:T20+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  item <next#> in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c3b5 <guienvntsystemenvbody:M13+0x238>, object 0x23d9e88, proto 0x96de84 next# [ast: 0x0005,0x023c] <guienvntsystemenvbody:T13+0x1> }
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x23d9e50, proto 0x96ddf4 XcallbackThread# [ast: 0x0005,0x021d] <guienvntsystemenvbody:T11+0x1> }
+  item <registerCallback#>XsystemEnvHandleCallbackP# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c09d <guienvntsystemenvbody:M15+0xb6>, object 0x21aba10, proto 0x96dee2 registerCallback# [ast: 0x0005,0x02d3] <guienvntsystemenvbody:T15+0x1> }
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x21a75f8, proto 0x96db8e PIOPRIVATE-~ [ast: 0x0005,0x0001] <guienvntsystemenvbody:T5+0x1> }
+  item registerCallback#<XsystemEnvHandleCallbackP#> in ~beta/guienv/guienv
+  { PC  0x4b2eb5 <guienv:M331+0xb>, object 0x21aba10, proto 0x9bced6 XsystemEnvHandleCallbackP# [ast: 0x0001,0x0e12] <guienv:T331+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4aaaa4 <guienv_ntiprivate:M38+0x5c>, object 0x23d9ea0, proto 0x9ad39e StandardWindowProc# [ast: 0x0001,0x04f0] <guienv_ntiprivate:T38+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4aaaf0 <guienv_ntiprivate:M38+0xa8>, object 0x23d9ea0, proto 0x9ad39e StandardWindowProc# [ast: 0x0001,0x04f0] <guienv_ntiprivate:T38+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  [ EXTERNAL ACTIVATION PART ]
+  item <GUIENVSTANDARDWINDOWPROC-~> in ~beta/guienv/private/winnt/guienv_ntibody
+  { PC  0x0 <<unknown>>, object 0x242e858, proto 0x9a684a GUIENVSTANDARDWINDOWPROC-~ [ast: 0x0002,0x0001] <guienv_ntibody:T58+0x1> }
+    -- StandardWindowProc# in ~beta/guienv/private/winnt/guienv_ntiprivate
+    { Surrounding object 0x23da0e0, proto 0x9ad39e StandardWindowProc# [ast: 0x0001,0x04f0] <guienv_ntiprivate:T38+0x1> }
+  item <*>cycle# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c155 <guienvntsystemenvbody:M14+0x27>, object 0x21abd20, proto 0x96deb2 * [ast: 0x0005,0x02bb] <guienvntsystemenvbody:T14+0x1> }
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x21a7648, proto 0x96ddf4 XcallbackThread# [ast: 0x0005,0x021d] <guienvntsystemenvbody:T11+0x1> }
+  item *<cycle#> in ~beta/basiclib/betaenv
+  { PC  0x611a29 <betaenv:M43+0xb>, object 0x21abd20, proto 0x94eca6 cycle# [ast: 0x0001,0x03bf] <betaenv:T43+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  comp <XcallbackThread#>System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c112 <guienvntsystemenvbody:G14>, object 0x21a7648, proto 0x96ddf4 XcallbackThread# [ast: 0x0005,0x021d] <guienvntsystemenvbody:T11+0x1> }
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x21a75f8, proto 0x96db8e PIOPRIVATE-~ [ast: 0x0005,0x0001] <guienvntsystemenvbody:T5+0x1> }
+  comp XcallbackThread#<System#>SysHead# in ~beta/basiclib/basicsystemenv
+  { PC  0x740e93 <basicsystemenv:M37>, object 0x21a7648, proto 0xadabcc System# [ast: 0x0001,0x00fb] <basicsystemenv:T18+0x1> }
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+    { Surrounding object 0x21a7938, proto 0xa0e0a0 PROGRAM-~ [ast: 0x0001,0x0001] <cpntools:T2+0x1> }
+  comp XcallbackThread#System#<SysHead#> in ~beta/basiclib/basicsystemenv
+  { PC  0x740b57 <basicsystemenv:M56+0xb>, object 0x21a7648, proto 0xadb516 SysHead# [ast: 0x0001,0x0310] <<unknown>> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+
+  item attNext#<realValue#> in ~beta/basiclib/betaenv
+  { PC  0x4028c5 <betaenv:M20+0xb>, object 0x21a78e8, proto 0x94e7fe realValue# [ast: 0x0001,0x0150] <betaenv:T20+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  item <next#> in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c3b5 <guienvntsystemenvbody:M13+0x238>, object 0x21a7680, proto 0x96de84 next# [ast: 0x0005,0x023c] <guienvntsystemenvbody:T13+0x1> }
+    -- XcallbackThread#System#SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x21a7648, proto 0x96ddf4 XcallbackThread# [ast: 0x0005,0x021d] <guienvntsystemenvbody:T11+0x1> }
+  item <registerCallback#>XsystemEnvHandleCallbackP# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c0d4 <guienvntsystemenvbody:M15+0xed>, object 0x21aba10, proto 0x96dee2 registerCallback# [ast: 0x0005,0x02d3] <guienvntsystemenvbody:T15+0x1> }
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x21a75f8, proto 0x96db8e PIOPRIVATE-~ [ast: 0x0005,0x0001] <guienvntsystemenvbody:T5+0x1> }
+  item registerCallback#<XsystemEnvHandleCallbackP#> in ~beta/guienv/guienv
+  { PC  0x4b2eb5 <guienv:M331+0xb>, object 0x21aba10, proto 0x9bced6 XsystemEnvHandleCallbackP# [ast: 0x0001,0x0e12] <guienv:T331+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4aaaa4 <guienv_ntiprivate:M38+0x5c>, object 0x23da0e0, proto 0x9ad39e StandardWindowProc# [ast: 0x0001,0x04f0] <guienv_ntiprivate:T38+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  item <StandardWindowProc#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4aaaf0 <guienv_ntiprivate:M38+0xa8>, object 0x23da0e0, proto 0x9ad39e StandardWindowProc# [ast: 0x0001,0x04f0] <guienv_ntiprivate:T38+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  [ EXTERNAL ACTIVATION PART ]
+  item <processOneEvent#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x0 <<unknown>>, object 0x2477318, proto 0x9acb68 processOneEvent# [ast: 0x0001,0x0018] <guienv_ntiprivate:T2+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  item <mainLoop#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4ab7b3 <guienv_ntiprivate:M1+0x33>, object 0x2477308, proto 0x9acb24 mainLoop# [ast: 0x0001,0x0003] <guienv_ntiprivate:T1+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  item <GUIenv#> in ~beta/guienv/guienv
+  { PC  0x4a8be7 <guienv:M1+0x4e>, object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  item <run#>run# in ~beta/postwimp/foundation/guisurface
+  { PC  0x48f188 <guisurface:M79>, object 0x2476260, proto 0x9a4676 run# [ast: 0x0001,0x0b43] <guisurface:T81+0x1> }
+    -- GUISurface#Surface# in ~beta/postwimp/foundation/guisurface
+    { Surrounding object 0x21a8828, proto 0x9a3236 GUISurface# [ast: 0x0001,0x0048] <guisurface:T4+0x1> }
+  item run#<run#> in ~beta/postwimp/foundation/abstractsurface
+  { PC  0x739497 <abstractsurface:M99+0xb>, object 0x2476260, proto 0xad3ec0 run# [ast: 0x0001,0x081f] <abstractsurface:T99+0x1> }
+    -- GUISurface#Surface# in ~beta/postwimp/foundation/guisurface
+    { Surrounding object 0x21a8828, proto 0x9a3236 GUISurface# [ast: 0x0001,0x0048] <guisurface:T4+0x1> }
+  item <platformAfter#> in ~beta/postwimp/foundation/private/worldbody
+  { PC  0x48d8de <worldbody:M91+0x38>, object 0x2476868, proto 0xa11ae8 platformAfter# [ast: 0x0003,0x000a] <worldbody:T91+0x1> }
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+    { Surrounding object 0x21a7938, proto 0xa0e0a0 PROGRAM-~ [ast: 0x0001,0x0001] <cpntools:T2+0x1> }
+  item <after#> in ~beta/postwimp/foundation/world
+  { PC  0x631d4f <world:M333+0x1c>, object 0x2476290, proto 0xacf37c after# [ast: 0x0001,0x1d9c] <world:T333+0x1> }
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+    { Surrounding object 0x21a7938, proto 0xa0e0a0 PROGRAM-~ [ast: 0x0001,0x0001] <cpntools:T2+0x1> }
+  comp PROGRAM-~CPNWorkSpace#Workspace#<World#>SystemEnv#SysHead# in ~beta/postwimp/foundation/world
+  { PC  0x72ebfb <world:M1+0x35>, object 0x21a7938, proto 0xac97b4 World# [ast: 0x0001,0x00c6] <world:T1+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  comp PROGRAM-~CPNWorkSpace#Workspace#World#<SystemEnv#>SysHead# in ~beta/basiclib/basicsystemenv
+  { PC  0x740cac <basicsystemenv:M4+0x1e>, object 0x21a7938, proto 0xada85c SystemEnv# [ast: 0x0001,0x002e] <basicsystemenv:T4+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  comp PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#<SysHead#> in ~beta/basiclib/basicsystemenv
+  { PC  0x740b57 <basicsystemenv:M56+0xb>, object 0x21a7938, proto 0xadb516 SysHead# [ast: 0x0001,0x0310] <<unknown>> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+
+  item <attNext#>realValue# in ~beta/basiclib/private/basicsystemenvbody
+  { PC  0x6108b6 <basicsystemenvbody:M21+0x1c3>, object 0x21a78e8, proto 0xa0c9d0 attNext# [ast: 0x0010,0x001a] <basicsystemenvbody:T21+0x1> }
+    -- BASICSYSTEMENVPRIVATE-~ in ~beta/basiclib/private/basicsystemenvbody
+    { Surrounding object 0x21a76e8, proto 0xa0c8d4 BASICSYSTEMENVPRIVATE-~ [ast: 0x0010,0x0001] <basicsystemenvbody:T20+0x1> }
+  item attNext#<realValue#> in ~beta/basiclib/betaenv
+  { PC  0x4028c5 <betaenv:M20+0xb>, object 0x21a78e8, proto 0x94e7fe realValue# [ast: 0x0001,0x0150] <betaenv:T20+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  item <UIIdle#>booleanValue# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44cfa8 <guienvntsystemenvbody:M6+0xbc>, object 0x21ab6d8, proto 0x96dc06 UIIdle# [ast: 0x0005,0x0028] <guienvntsystemenvbody:T6+0x1> }
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x21a75f8, proto 0x96db8e PIOPRIVATE-~ [ast: 0x0005,0x0001] <guienvntsystemenvbody:T5+0x1> }
+  item UIIdle#<booleanValue#> in ~beta/basiclib/betaenv
+  { PC  0x40290b <betaenv:M14+0xb>, object 0x21ab6d8, proto 0x94e6a2 booleanValue# [ast: 0x0001,0x0104] <betaenv:T14+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  item <processOneEvent#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4ab280 <guienv_ntiprivate:M2+0x7a>, object 0x21abab8, proto 0x9acb68 processOneEvent# [ast: 0x0001,0x0018] <guienv_ntiprivate:T2+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  item <mainLoop#> in ~beta/guienv/private/winnt/guienv_ntiprivate
+  { PC  0x4ab7b3 <guienv_ntiprivate:M1+0x33>, object 0x21abaa8, proto 0x9acb24 mainLoop# [ast: 0x0001,0x0003] <guienv_ntiprivate:T1+0x1> }
+    -- GUIenv# in ~beta/guienv/guienv
+    { Surrounding object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+  item <GUIenv#> in ~beta/guienv/guienv
+  { PC  0x4a8be7 <guienv:M1+0x4e>, object 0x21a8940, proto 0x9b85fc GUIenv# [ast: 0x0001,0x0003] <guienv:T1+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  item <start#> in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44c912 <guienvntsystemenvbody:M10+0x487>, object 0x21a8e10, proto 0x96ddc4 start# [ast: 0x0005,0x01aa] <guienvntsystemenvbody:T10+0x1> }
+    -- PIOPRIVATE-~ in ~beta/guienv/private/winnt/guienvntsystemenvbody
+    { Surrounding object 0x21a75f8, proto 0x96db8e PIOPRIVATE-~ [ast: 0x0005,0x0001] <guienvntsystemenvbody:T5+0x1> }
+  comp <BASICSCHEDULER-~>SysHead# in ~beta/guienv/private/winnt/guienvntsystemenvbody
+  { PC  0x44ba90 <guienvntsystemenvbody:M3>, object 0x21a8e38, proto 0x96dade BASICSCHEDULER-~ [ast: 0x0002,0x0001] <guienvntsystemenvbody:T2+0x1> }
+    -- PROGRAM-~CPNWorkSpace#Workspace#World#SystemEnv#SysHead# in C:/cpn2000/cpntools/cpntools
+    { Surrounding object 0x21a7938, proto 0xa0e0a0 PROGRAM-~ [ast: 0x0001,0x0001] <cpntools:T2+0x1> }
+  comp BASICSCHEDULER-~<SysHead#> in ~beta/basiclib/basicsystemenv
+  { PC  0x740b57 <basicsystemenv:M56+0xb>, object 0x21a8e38, proto 0xadb516 SysHead# [ast: 0x0001,0x0310] <<unknown>> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+
+  item <*> in ~beta/basiclib/betaenv
+  { PC  0x48b24c <betaenv:M172+0x95>, object 0x21a8e00, proto 0x9509aa * [ast: 0x0001,0x0c3c] <betaenv:T172+0x1> }
+    -- BETAENV-~ in ~beta/basiclib/betaenv
+    { Surrounding object 0x21a7418, proto 0x94e3a0 BETAENV-~ [ast: 0x0001,0x0001] <betaenv:T1+0x1> }
+  basic component in ~beta/basiclib/betaenv
+
+Legend:
+
+The above dumps show the dynamic call stack of invoked objects.
+Each dump starts at the object that was the current object when
+the error occurred and continues down towards the basic component.
+The descriptions have the following meaning:
+1. Items are shown in two lines, like this:
+      item <name#>pname1#pname2#pname3 in ifile
+        -- sname#spname1#spname2 in sfile
+   meaning that the item is an instance of the pattern "name" which
+   has prefix "pname1" which has prefix "pname2", etc. 
+   This item is defined in the file "ifile". 
+   The part of the prefix chain enclosed in "<" and ">" indicates
+   where in the action sequence the error occurred.
+   The line beginning with "--" shows the textually surrounding
+   pattern using the same notation.
+2. The descriptor names used in the above description will normally
+   have one or more "meta characters" appended. These mean:
+      #  The descriptor belongs to a pattern, e.g. P: (# ... #)
+      ~  Singular named descriptor, e.g. X: @(# ... #)
+      *  Singular unnamed descriptor, e.g. ... ; (# ... #) ; ...
+      -  Descriptor SLOT.
+3. Components are shown using a notation similar to that of items:
+      comp <name#>pname1#pname2#pname3 in cfile
+4. The bottommost component corresponding to the basic environment is
+   shown like an ordinary component, but indicated with
+      basic component <name#>pname1#pname2#pname3 in cfile
+5. In case the error occurred in some external code called from BETA,
+   the top of the call stack is shown as
+      [ EXTERNAL ACTIVATION PART ]
+6. In case the BETA code has called some external code which has in
+   turn called back into the BETA code, and the callback is still
+   active at the point of the error, the intermediate call stack part
+   is shown as
+      [ EXTERNAL ACTIVATION PART ]
+7. The section labeled "Low level information" can be avoided by
+      set BETART=SimpleDump
+   before subsequent executions of the program.

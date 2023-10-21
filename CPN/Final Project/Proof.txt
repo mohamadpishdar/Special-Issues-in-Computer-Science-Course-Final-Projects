@@ -1,0 +1,4 @@
+{{A-->CB(Augmentation) =>AD-->CBD}
+,{{B-->E,DC-->FE(General Unification) =>BDC-->EF}
+(Decomposition) =>BDC-->F}
+(Transitivity) =>AD-->F}
